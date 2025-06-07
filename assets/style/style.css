@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+.top-container {
+    width: 100%;
+    background: #80acff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+
+    .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header h1 {
+    font-family: 'Gabarito', cursive;
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+    letter-spacing: 1px;
+}
+}
+
+.logo img {
+    height: 48px;
+    width: 48px;
+}
+
+.header h1 {
+    font-family: 'Gabarito', cursive;
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    margin-top: 12px;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 0 0;
+    margin: 0px 0px 10px 0px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+.menu-list li a:hover {
+    color: #e3eaff;
+    font-weight: 600;
+    line-height: 1px;
+    transition: ease-in-out 1s;
+}
+
+
+@media (max-width: 700px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .menu-list {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    .logo-title {
+        justify-content: center;
+    }
+}
