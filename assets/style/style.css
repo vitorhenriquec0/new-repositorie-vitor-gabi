@@ -7,10 +7,14 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Gabarito', sans-serif;
     background: #f5f7fa;
+    transition: opacity 0.4s;
 }
 
+body.fade-out {
+  opacity: 0;
+}
 
 .main-content {
     background: #fff7dd;
@@ -100,23 +104,37 @@ body {
     background: var(--background-color);
 }
 
-.products-section h3 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #000;
-    margin-bottom: 40px;
-    margin-top: 10px;
+.product-header {
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    font-family: 'Gabarito', cursive;
-    font-weight: 700;
-    letter-spacing: 1px;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
+    padding: 0 24px;
 }
 
-.products-section h4 {
-    
+.product-header h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Gabarito', cursive;
+    font-weight: 700;
+    color: #000;
+}
+
+.product-header button {
+    padding: 10px 24px;
+    border-radius: 24px;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.product-header button:hover {
+    background: var(--terciary-color);
 }
 
 .products-section .product-list {
@@ -140,4 +158,81 @@ body {
     aspect-ratio: 2/3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0;
+}
+
+.sobre-nos {
+    padding: 50px 0;
+    background: var(--border-color);
+    color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+.sobre-nos-image img {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    margin: 0;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.sobre-nos-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 520px;
+    width: 100%;
+    padding: 0 12px;
+    gap: 18px;
+}
+
+.sobre-nos-info h3 {
+    font-size: 3rem;
+    margin: 0 0 12px 0;
+    text-align: left;
+    color: var(--background-color);
+}
+
+.sobre-nos-info p {
+    font-size: 1.15rem;
+    color: var(--background-color);
+    margin: 0 0 10px 0;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.sobre-nos-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 900px) {
+    .sobre-nos {
+        flex-direction: column;
+        gap: 32px;
+        padding: 32px 0;
+    }
+    .sobre-nos-image img {
+        max-width: 260px;
+    }
+    .sobre-nos-info {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        padding: 0 8px;
+    }
+    .sobre-nos-text {
+        align-items: center;
+        text-align: center;
+    }
 }
