@@ -116,7 +116,7 @@ body.fade-out {
 
 .product-header h2 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: 'Gabarito', cursive;
     font-weight: 700;
     color: #000;
@@ -160,22 +160,47 @@ body.fade-out {
     margin: 0;
 }
 
+.product-item h4 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    max-width: 300px;
+}
+
+.product-item p {
+    font-size: 1.1rem;
+    margin: 20px 0;
+    color: black;
+    text-align: center;
+    font-weight: 300;
+    max-width: 300px;
+}
+
 .sobre-nos {
     padding: 50px 0;
-    background: var(--border-color);
+    background: var(--secondary-color);
     color: var(--background-color);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 48px;
+}
+
+.sobre-nos-image {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    align-items: center;
+    justify-content: center;
 }
 
 .sobre-nos-image img {
     width: 100%;
     max-width: 340px;
     border-radius: 15px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
     margin: 0;
     aspect-ratio: 2/3;
     object-fit: cover;
@@ -184,9 +209,9 @@ body.fade-out {
 .sobre-nos-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    max-width: 520px;
+    max-width: 1200px;
     width: 100%;
     padding: 0 12px;
     gap: 18px;
@@ -195,15 +220,18 @@ body.fade-out {
 .sobre-nos-info h3 {
     font-size: 3rem;
     margin: 0 0 12px 0;
-    text-align: left;
-    color: var(--background-color);
+    text-align: center;
+    background: var(--background-color);
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: var(--secondary-color);
 }
 
 .sobre-nos-info p {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: var(--background-color);
     margin: 0 0 10px 0;
-    text-align: left;
+    text-align: center;
     line-height: 1.6;
 }
 
@@ -215,24 +243,183 @@ body.fade-out {
     width: 100%;
 }
 
-/* Responsivo para telas menores */
-@media (max-width: 900px) {
-    .sobre-nos {
-        flex-direction: column;
-        gap: 32px;
-        padding: 32px 0;
-    }
-    .sobre-nos-image img {
-        max-width: 260px;
-    }
-    .sobre-nos-info {
-        align-items: center;
-        text-align: center;
-        max-width: 100%;
-        padding: 0 8px;
-    }
-    .sobre-nos-text {
-        align-items: center;
-        text-align: center;
-    }
+.contato {
+    padding: 50px 0;
+    background: var(--primary-color);
+    color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 100px;
+    /* max-width: 1000px;         /* largura máxima */
+    /* margin: 48px auto;        /* centraliza na página */
+    /* border-radius: 18px;      /* cantos arredondados */
+    /* box-shadow: 0 8px 32px rgba(44,62,80,0.18); /* sombra */
+}
+
+.contato-info {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    max-width: 350px;
+}
+
+.contato-info .contato-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato-info h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--background-color);
+    white-space: nowrap;
+}
+
+.contato-info .contato-info-span {
+    background: var(--background-color);
+    border-radius: 30px;
+    padding: 10px;
+    color: var(--terciary-color);
+}
+
+.contato-info p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: var(--background-color);
+    white-space: nowrap;
+}
+
+.contato-info .contato-info-border {
+    background: var(--background-color);
+    border-radius: 15px;
+    color: var(--terciary-color);
+    font-weight: 600;
+    padding: 1px 7px;
+}
+
+.contato-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contato-info li {
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+.contato form {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: var(--background-color);
+    color: var(--border-color);
+    border-radius: 15px;
+    padding: 28px 34px 28px 22px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    max-width: 400px;
+}
+
+.contato form label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--border-color);
+}
+
+.contato form input,
+.contato form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    background: #fff;
+    color: #222;
+    resize: none;
+}
+
+.contato form button {
+    background: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 24px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contato form button:hover {
+    background: var(--terciary-color);
+}
+
+
+.footer {
+    text-decoration: none;
+    list-style: none;
+    background: #701a2f;
+    color: var(--background-color);
+    padding: 32px 0 16px 0;
+    width: 100%;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    color: var(--background-color);
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 24px;
+    padding: 0;
+    margin: 8px 0 0 0;
+}
+
+.social-media li a {
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.social-media .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    transition: transform 0.2s;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.social-media li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
