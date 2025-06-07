@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,96 +11,133 @@ body {
     background: #f5f7fa;
 }
 
-.top-container {
-    width: 100%;
-    background: #80acff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+
+.main-content {
+    background: #fff7dd;
 }
 
-.header {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 24px;
+.hero-section h2, p {
+    color: #000000;
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 30px 0 0 0;
+}
+
+.hero-section p {
+    font-size: 1.05rem;
+    margin: 0;
+    padding: 24px 0 20px 0;
+}
+
+.hero-section h2 .h2-title {
+    background: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 30px;
+    color: white;
+}
+
+.hero-section .banner-image{
+    background: var(--primary-color);
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    padding: 0 50px;
+}
+
+.hero-section .banner-image .banner-text {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+    max-width: 500px;
+}
+
+.hero-section .banner-image .banner-text h3 {
+    font-size: 4.5rem;
+    font-weight: 800;
+}
+
+.hero-section .banner-image .banner-text button {
+    background: #fff7dd;
+    border: 2px solid var(--terciary-color);
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:#000000;
+    padding: 15px 30px;
+    margin-bottom: 100px;
+}
+
+.hero-section .banner-image .banner-text button:hover {
+    background: var(--terciary-color);
+    color: var(--background-color);
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-section .banner-image img{
+    width: 100%;
+    height: auto;
+    max-width: 850px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section .banner-image img:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+}
+
+.products-section {
+    padding: 50px 0;
+    background: var(--background-color);
+}
+
+.products-section h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Gabarito', cursive;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.products-section h4 {
+    
+}
+
+.products-section .product-list {
+    background: var(--quartenary-color);
+    margin: 0 15px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 24px; /* Espaço entre os itens */
+    padding: 24px;
+}
+
+.products-section .product-list .product-item {
+    background: var(--background-color);
+    border-radius: 15px;
+    padding: 20px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 16px;
-
-    .logo-title {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.header h1 {
-    font-family: 'Gabarito', cursive;
-    font-size: 2rem;
+    aspect-ratio: 2/3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0;
-    color: #fff;
-    letter-spacing: 1px;
-}
-}
-
-.logo img {
-    height: 48px;
-    width: 48px;
-}
-
-.header h1 {
-    font-family: 'Gabarito', cursive;
-    font-size: 2rem;
-    margin: 0;
-    color: #fff;
-    letter-spacing: 1px;
-}
-
-.nav-menu {
-    margin-top: 12px;
-}
-
-.menu-list {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    padding: 0 0;
-    margin: 0px 0px 10px 0px;
-}
-
-.menu-list li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.05rem;
-    transition: color 0.2s;
-}
-
-.menu-list li a:hover {
-    color: #e3eaff;
-    font-weight: 600;
-    line-height: 1px;
-    transition: ease-in-out 1s;
-}
-
-
-@media (max-width: 700px) {
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
-    .menu-list {
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
-    }
-    .logo-title {
-        justify-content: center;
-    }
 }
