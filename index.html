@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquarela Papelaria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/style/variables.css">
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="../assets/style/header.css">
@@ -27,7 +28,7 @@
                    <div class="line3"></div>
                  </div>
                     <ul class="menu-list">
-                        <li><a href="#">Início</a></li>
+                        <li><a href="#main-content">Início</a></li>
                         <li><a href="./html/Produtos.html">Produtos</a></li>
                         <li><a href="#">Sobre nós</a></li>
                         <li><a href="#">Contato</a></li>
@@ -37,7 +38,7 @@
         </header>
     </div>
 
-    <main class="main-content">
+    <main class="main-content" id="main-content">
         <section class="hero-section">
             <h2>Bem-vindo à <span class="h2-title">Aquarela Papelaria</span></h2>
             <p>Encontre tudo o que você precisa para seus estudos e trabalhos.</p>
@@ -52,8 +53,10 @@
         </section>
 
         <section class="products-section">
-            <h3>Nossos Produtos</h3>
-            <button>Veja mais</button>
+            <div class="product-header">
+                <h2>Produtos em Destaque</h2>
+                <a href="./html/Produtos.html"><button>Veja mais</button></a>
+            </div>
             <div class="product-list">
                 <div class="product-item">
                     <h4>Caderno Inteligente Estrelado</h4>
@@ -107,28 +110,50 @@
         </section>
 
         <section class="sobre-nos">
-            <h3>Sobre Nós</h3>
-            <p>Somos uma papelaria dedicada a oferecer os melhores produtos para estudantes e profissionais. Nossa
-                missão é fornecer qualidade e variedade para atender todas as suas necessidades.</p>
-            <p> Nossa Historia dsidos Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quisquam
-                dignissimos labore, atque alias voluptatem iusto voluptas esse enim voluptate, autem veniam error. Dicta
-                et consectetur hic quam fuga. Deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                obcaecati aut vero eveniet veritatis quasi dolores vel fuga inventore ab nulla accusantium atque,
-                provident est architecto necessitatibus ad voluptates accusamus.</p>
-            <div class="sobre-nos-image">
-                <img src="" alt="Sobre Nós">
+
+            <div class="sobre-nos-info">
+                <h3>Sobre Nós</h3>
+                <div class="sobre-nos-text">
+                    <p>Somos uma papelaria dedicada a oferecer os melhores produtos para estudantes e profissionais.
+                        Nossa
+                        missão é fornecer qualidade e variedade para atender todas as suas necessidades.</p>
+                    <p> Nossa Historia dsidos Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quisquam
+                        dignissimos labore, atque alias voluptatem iusto voluptas esse enim voluptate, autem veniam
+                        error.
+                        Dicta
+                        et consectetur hic quam fuga. Deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Illo
+                        obcaecati aut vero eveniet veritatis quasi dolores vel fuga inventore ab nulla accusantium
+                        atque,
+                        provident est architecto necessitatibus ad voluptates accusamus.</p>
+                </div>
+                <div class="sobre-nos-image">
+                    <img src="./assets/img/buque_de_papelaria_rosa_m_dia_dos_namorados_1443_1_6ed59d7ebbf08087e0fa5afbc35f2c64.webp"
+                        alt="Sobre Nós">
+                        <img src="./assets/img/buque_de_papelaria_rosa_m_dia_dos_namorados_1443_1_6ed59d7ebbf08087e0fa5afbc35f2c64.webp"
+                        alt="Sobre Nós">
+                        <img src="./assets/img/buque_de_papelaria_rosa_m_dia_dos_namorados_1443_1_6ed59d7ebbf08087e0fa5afbc35f2c64.webp"
+                        alt="Sobre Nós">
+                </div>
             </div>
         </section>
 
         <section class="contato">
-            <div class="form-contato">
-            <h3>Contato</h3>
-            <p>Para mais informações, entre em contato conosco:</p>
-            <ul>
-                <li>Email:</li>
-                <li>Telefone:</li>
-                <li>Endereço:</li>
-            </ul>
+            <div class="contato-info">
+                <div class="form-contato">
+            <h3>Contato <span class="contato-info-span">Papelaria Aquarela</span></h3>
+                <div class="contato-text">
+                    <p>Para mais informações, entre em contato conosco:</p>
+                    <ul>
+                        <li><span class="contato-info-border">Email:</span> aquarelapapelaria@gmail.com</li>
+                        <li><span class="contato-info-border">Telefone:</span> (18) 99817-8771</li>
+                        <li><span class="contato-info-border">Endereço:</span> Av. Frei Marcelo Manília, 980 | Centro,
+                            Buritama-SP</li>
+                    </ul>
+                </div>
+
+            </div>
+
             <form id action="#" method="post">
                 <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required>
@@ -144,18 +169,25 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2023 Aquarela Papelaria. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Aquarela Papelaria. Todos os direitos reservados.</p>
             <ul class="social-media">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-facebook icon"></span>
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-instagram icon"></span>
+                        Instagram
+                    </a>
+                </li>
             </ul>
         </div>
     </footer>
 
-        <script src="./assets/js/main.js"></script>
-        <script type="module" src="./assets/js/exibirprodutos.js"></script>
-        <script src="./assets/js/contato.js"></script>
-
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
