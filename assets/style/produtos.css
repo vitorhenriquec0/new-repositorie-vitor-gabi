@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Montserrat:ital,wght@0,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.top-container {
+  width: 100%;
+  background: #80acff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-title h1 {
+  font-family: 'Gabarito', cursive;
+  font-size: 2rem;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.main-content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-form-section h2 {
+  text-align: center;
+  color: #80acff;
+  margin-bottom: 24px;
+  font-family: 'Gabarito', cursive;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 600;
+  color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+  border-color: #80acff;
+  outline: none;
+}
+
+button {
+  background-color: #80acff;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5f82d1;
+}
+
+@media (max-width: 700px) {
+  .main-content {
+    margin: 20px 16px;
+    padding: 16px;
+  }
+}
+
+h2{
+    color: #f76d6d;
+}
