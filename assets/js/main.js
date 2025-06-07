@@ -3,8 +3,7 @@ document.querySelectorAll('a').forEach(link => {
     if (this.target === "_blank") return; // ignora links externos
     e.preventDefault();
     document.body.classList.add('fade-out');
-    setTimeout(() => {
-      window.location = this.href;
+    setTimeout(() => {;
     }, 400); // tempo da animação
   });
 });

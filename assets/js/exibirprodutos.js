@@ -1,6 +1,6 @@
 //firebase-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAeRFLRmFhTujKWZuW2UndQj_jqu4_JJSU",
@@ -11,29 +11,28 @@ const firebaseConfig = {
   appId: "1:744773116089:web:f82dcb394e29394c84bb68"
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
-//
+  // Função para carregar os produtos
+  async function carregarProdutos() {
+    const listaProdutos = document.querySelector(".product-list");
+    listaProdutos.innerHTML = ""; // Limpa os produtos padrão
 
-const container = document.querySelector('.product-list');
-async function carregarProdutos() {
-    const querySnapshot = await getDocs(collection(db, 'produtos'));
-
+    const querySnapshot = await getDocs(collection(db, "produtos"));
     querySnapshot.forEach((doc) => {
-        const produto = doc.data();
-        const div = document.createElement('div');
-        div.classList.add('product-item');
-
-        div.innerHTML = `
-            <img src="${produto.imagem || './assets/img/default.jpg'}" alt="${produto.nome}">
-            <h4>${produto.nome}</h4>
-            <p>${produto.descricao}</p>
-            <span>R$ ${parseFloat(produto.preco).toFixed(2)}</span>
-        `;
-        container.appendChild(div);
+      const produto = doc.data();
+      const itemHTML = `
+        <div class="product-item">
+          <h4>${produto.nome}</h4>
+          <img src="${produto.imagem || './assets/img/padrao.jpg'}" alt="${produto.nome}">
+          <p>${produto.descricao}</p>
+          <p><strong>R$ ${produto.preco.toFixed(2)}</strong></p>
+        </div>
+      `;
+      listaProdutos.innerHTML += itemHTML;
     });
-}
+  }
 
-carregarProdutos();
-
+  // Executa ao carregar a página
+  carregarProdutos();

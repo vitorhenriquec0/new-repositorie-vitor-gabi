@@ -15,16 +15,20 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 //
 
+
+//Cadastro dos produtos
 const form = document.getElementById('produtos');
 form.addEventListener('submit', async (e) =>{
     e.preventDefault();
 
 const nome = form.nome.value;
 const preco = parseFloat(form.preco.value);
+const descricao = form.descricao.value;
 
 try {
     await addDoc(collection(db, "produtos"),{
      nome,
+     descricao,
      preco
     });
     alert("Produto cadastrado com sucesso.");
@@ -34,3 +38,5 @@ try {
     alert("erro ao cadastrar");
 }
 })
+//
+
