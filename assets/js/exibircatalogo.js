@@ -15,11 +15,13 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 //
 
+
 async function carregarProdutos() {
   const listaProdutos = document.querySelector(".product-list");
   listaProdutos.innerHTML = ""; 
 
   const querySnapshot = await getDocs(collection(db, "catalogo"));
+
   querySnapshot.forEach((doc) => {
     const produto = doc.data();
     const itemHTML = `
@@ -33,7 +35,8 @@ async function carregarProdutos() {
   `;
     listaProdutos.innerHTML += itemHTML;
   });
-}
 
+  exibirProdutos(todosProdutos);
+}
 
 carregarProdutos();

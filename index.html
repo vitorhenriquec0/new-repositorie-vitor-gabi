@@ -30,7 +30,12 @@
                         <li><a href="#contatar">Contato</a></li>
                     </ul>
                 </nav>
-            </div>
+
+                <div class="product-search">
+                    <input type="text" id="search-input" placeholder="Pesquisar produtos..." />
+                    <button id="search-button" class="fa fa-search"></button>
+                    <div id="search-results" class="search-results-container"></div>
+                </div>
         </header>
     </div>
 
@@ -144,6 +149,7 @@
 
     <script type="module" src="./assets/js/exibirprodutos.js"></script>
     <script type="module" src="./assets/js/mensagem.js"></script>
+    <script src="./assets/js/filterProducts.js"></script>
 </body>
 
 </html>
