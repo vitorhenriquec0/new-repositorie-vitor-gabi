@@ -1,4 +1,3 @@
-//firebase-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
 
@@ -13,8 +12,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-//
 
+<<<<<<< HEAD
 
 async function carregarProdutos() {
   const listaProdutos = document.querySelector(".product-list");
@@ -22,21 +21,37 @@ async function carregarProdutos() {
 
   const querySnapshot = await getDocs(collection(db, "catalogo"));
 
+=======
+async function carregarProdutos(colecao, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';  // Limpa antes de adicionar
+
+  const querySnapshot = await getDocs(collection(db, colecao));
+
+>>>>>>> be785954fd1606b9096ee58f2d7b8329d87211ff
   querySnapshot.forEach((doc) => {
     const produto = doc.data();
-    const itemHTML = `
-    <div class="product-item">
-      <img src="${produto.imagem || './assets/img/padrao.jpg'}" alt="${produto.nome}">
+
+    const item = document.createElement('div');
+    item.className = 'product-item';
+    item.innerHTML = `
+      <img src="${produto.imagem}" alt="${produto.nome}">
       <h4>${produto.nome}</h4>
       <span class="product-price">R$ ${produto.preco.toFixed(2)}</span>
       <p>${produto.descricao}</p>
-      <button class="buy-btn">Comprar</button>
-    </div>
-  `;
-    listaProdutos.innerHTML += itemHTML;
+      <button class="buy-btn" data-nome="${produto.nome}" data-preco="${produto.preco}" data-imagem="${produto.imagem}" data-descricao="${produto.descricao}">
+        Adicionar ao carrinho
+      </button>
+    `;
+    container.appendChild(item);
   });
 
   exibirProdutos(todosProdutos);
 }
 
+<<<<<<< HEAD
 carregarProdutos();
+=======
+carregarProdutos("promocao", "promocao");
+carregarProdutos("catalogo", "catalogo");
+>>>>>>> be785954fd1606b9096ee58f2d7b8329d87211ff

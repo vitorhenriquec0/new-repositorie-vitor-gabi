@@ -1,6 +1,7 @@
 //firebase-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
+import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAeRFLRmFhTujKWZuW2UndQj_jqu4_JJSU",
@@ -13,6 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth();
 //
 
 
@@ -42,4 +44,49 @@ try {
 })
 //
 
+<<<<<<< HEAD
 
+=======
+// login anonimo 
+
+function autenticarUsuarioAnonimamente() {
+    return new Promise ((resolve, reject) => {
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                resolve(user);
+            } else {
+                try {
+                    const result = await signInAnonymously(auth);
+                    resolve(result.user);
+                }catch(error) {
+                    reject(error);
+                }
+            }
+        });
+    });
+}
+
+document.addEventListener('click', async (e) => {
+  if (e.target.classList.contains('buy-btn')) {
+    const btn = e.target;
+    
+    const produto = {
+      nome: btn.dataset.nome,
+      preco: parseFloat(btn.dataset.preco),
+      imagem: btn.dataset.imagem,
+      descricao: btn.dataset.descricao,
+    };
+
+    try {
+      const user = await autenticarUsuarioAnonimamente();
+      const userId = user.uid;
+
+
+      const docRef = await addDoc(collection(db, "carrinhos", userId, "itens"), produto);
+      alert("Produto adicionado ao carrinho!");
+    } catch (error) {
+      console.error("Erro ao adicionar ao carrinho:", error);
+    }
+  }
+});
+>>>>>>> be785954fd1606b9096ee58f2d7b8329d87211ff
