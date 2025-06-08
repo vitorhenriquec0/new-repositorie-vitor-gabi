@@ -15,7 +15,17 @@ const db = getFirestore(app);
 
 
 async function carregarProdutos() {
-  const listaProdutos = document.querySelector(".product-list");
+  // Seleciona a .product-list da seção "Todos os produtos"
+  const allSections = document.querySelectorAll('section');
+  let listaProdutos = null;
+  allSections.forEach(section => {
+    const h2 = section.querySelector('h2');
+    if (h2 && h2.textContent.trim() === "Todos os produtos") {
+      listaProdutos = section.querySelector('.product-list');
+    }
+  });
+  if (!listaProdutos) return;
+
   listaProdutos.innerHTML = ""; 
 
   const querySnapshot = await getDocs(collection(db, "catalogo"));
@@ -34,10 +44,8 @@ async function carregarProdutos() {
         Adicionar ao carrinho
       </button>
     `;
-    container.appendChild(item);
+    listaProdutos.appendChild(item);
   });
-
-  exibirProdutos(todosProdutos);
 }
 
 carregarProdutos();

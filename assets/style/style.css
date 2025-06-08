@@ -47,7 +47,7 @@ body.fade-out {
 .hero-section .banner-image{
     background: var(--primary-color);
     height: 650px;
-    display: flex;
+    font-family: 'Gabarito', sans-serif;display: flex;
     justify-content: center;
     align-items: center;
     gap: 200px;
@@ -139,8 +139,8 @@ body.fade-out {
     padding: 32px 24px;
     background: var(--quartenary-color);
     border-radius: 15px;
-    box-shadow: 0 4px 24px rgba(44,62,80,0.08);
-    margin: 0 auto;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.15);
+    margin: 30px auto;
     max-width: 1200px;
 }
 
@@ -163,14 +163,15 @@ body.fade-out {
 
 .product-item img {
     width: 100%;
-    max-width: 160px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
+    max-width: 150px;
+    aspect-ratio: 2/3;
+    object-fit: contain;
     border-radius: 12px;
-    margin-bottom: 18px;
+    mfont-family: 'Gabarito', sans-serif;argin-bottom: 18px;
     box-shadow: 0 2px 8px rgba(44,62,80,0.08);
     background: #f5f7fa;
     overflow: hidden;
+    display: block;
 }
 
 .product-price {
@@ -226,6 +227,15 @@ body.fade-out {
 .buy-btn:hover {
     background: var(--terciary-color);
     transform: scale(1.06);
+}
+
+.all-products h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    margin: 40px 0;
+    font-family: 'Gabarito', sans-serif;
 }
 
 
