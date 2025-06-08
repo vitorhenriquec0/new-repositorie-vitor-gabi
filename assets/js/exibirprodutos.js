@@ -13,11 +13,11 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+//
 
-// Função para carregar os produtos
 async function carregarProdutos() {
   const listaProdutos = document.querySelector(".product-list");
-  listaProdutos.innerHTML = ""; // Limpa os produtos padrão
+  listaProdutos.innerHTML = ""; 
 
   const querySnapshot = await getDocs(collection(db, "produtos"));
   querySnapshot.forEach((doc) => {
@@ -28,7 +28,7 @@ async function carregarProdutos() {
       <h4>${produto.nome}</h4>
       <span class="product-price">R$ ${produto.preco.toFixed(2)}</span>
       <p>${produto.descricao}</p>
-      <button class="buy-btn">Comprar</button>
+      <button class="buy-btn">Adicionar ao carrinho</button>
     </div>
   `;
     listaProdutos.innerHTML += itemHTML;

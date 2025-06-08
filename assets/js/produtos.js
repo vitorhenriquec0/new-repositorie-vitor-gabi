@@ -21,12 +21,14 @@ const form = document.getElementById('produtos');
 form.addEventListener('submit', async (e) =>{
     e.preventDefault();
 
+const imagem = document.getElementById("imagem").value;
 const nome = form.nome.value;
 const preco = parseFloat(form.preco.value);
 const descricao = form.descricao.value;
 
 try {
     await addDoc(collection(db, "produtos"),{
+     imagem,
      nome,
      descricao,
      preco
