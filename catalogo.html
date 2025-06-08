@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cadastro de Produtos</title>
-    <link rel="stylesheet" href="./assets/style/catalogo.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="./assets/style/catalogo.css" />
 </head>
 <body>
   <div class="top-container">
@@ -19,22 +19,24 @@
 
   <main class="main-content">
     <section class="product-form-section">
-      <h2>Cadastro de Produto - Catalogo</h2>
+      <h2>Cadastro de Produto</h2>
       <form id="catalogo">
         <label for="nome">Nome do produto:</label>
-        <input type="text" id="nome" name="nome" placeholder="Insira o nome do produto" required />
+        <input type="text" id="nome" name="nome" required placeholder="Insira o nome do produto" />
 
-        <label for="nome">Descrição do produto:</label>
-        <input type="text" id="descricao" name="descricao" placeholder="Insira a descricao" required />
+        <label for="descricao">Descrição do produto:</label>
+        <input type="text" id="descricao" name="descricao" required placeholder="Insira a descrição" />
 
         <label for="preco">Preço:</label>
-        <input type="number" id="preco" name="preco" placeholder="Ex: 29.90" step="0.01" min="0" required />
+        <input type="number" id="preco" name="preco" step="0.01" min="0" required placeholder="Ex: 29.90" />
 
         <label for="imagem">URL da imagem:</label>
-        <input type="text" id="imagem" placeholder="https://...">
+        <input type="text" id="imagem" name="imagem" required placeholder="https://..." />
 
-
-        <button type="submit">Cadastrar Produto</button>
+        <div class="buttons">
+          <button type="button" id="btnCatalogo">Cadastrar como Catálogo</button>
+          <button type="button" id="btnPromocao">Cadastrar como Promoção</button>
+        </div>
       </form>
     </section>
   </main>

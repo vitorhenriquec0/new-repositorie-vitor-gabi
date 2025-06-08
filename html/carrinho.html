@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produtos - Papelaria Aquarela</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seu Carrinho - Aquarela Papelaria</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../assets/style/variables.css">
   <link rel="stylesheet" href="../assets/style/header.css">
@@ -25,7 +25,6 @@
             <li><a href="./Produtos.html">Produtos</a></li>
             <li><a href="../index.html#sobre-nos">Sobre nós</a></li>
             <li><a href="../index.html#contatar">Contato</a></li>
-            <li><a href="../html/carrinho.html"><button id="buy-btn">Carrinho</button></a></li>
           </ul>
         </nav>
       </div>
@@ -34,14 +33,9 @@
 
   <main>
     <section>
-      <h2>Produtos em Promoção</h2>
-      <div id="promocao" class="product-list">
-      </div>
-    </section>
-
-    <section>
-      <h2>Todos os Produtos</h2>
-      <div id="catalogo" class="product-list">
+      <h2>Seu Carrinho</h2>
+      <div class="product-list" id="carrinho-list">
+        <!-- Produtos do carrinho serão exibidos aqui via JavaScript -->
       </div>
     </section>
   </main>
@@ -52,19 +46,21 @@
       <ul class="social-media">
         <li>
           <a href="https://www.facebook.com/profile.php?id=100064709422844">
-            <span class="fa fa-facebook icon"></span> Facebook
+            <span class="fa fa-facebook icon"></span>
+            Facebook
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/aquarela_papelariabta">
-            <span class="fa fa-instagram icon"></span> Instagram
+            <span class="fa fa-instagram icon"></span>
+            Instagram
           </a>
         </li>
       </ul>
     </div>
   </footer>
 
-  <script type="module" src="../assets/js/exibircatalogo.js"></script>
-  <script type="module" src="../assets/js/produtos.js"></script>
+
+  <script type="module" src="../assets/js/exibirCarrinho.js"></script>
 </body>
 </html>
