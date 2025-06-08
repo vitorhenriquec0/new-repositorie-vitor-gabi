@@ -37,5 +37,12 @@ form.addEventListener('submit', async (e) => {
         alert("Erro ao cadastrar");
     }
 });
+
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('buy-btn')) {
+    alert('Produto adicionado ao carrinho!');
+  }
+});
+
 //
 
