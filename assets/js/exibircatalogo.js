@@ -13,7 +13,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-<<<<<<< HEAD
 
 async function carregarProdutos() {
   const listaProdutos = document.querySelector(".product-list");
@@ -21,14 +20,6 @@ async function carregarProdutos() {
 
   const querySnapshot = await getDocs(collection(db, "catalogo"));
 
-=======
-async function carregarProdutos(colecao, containerId) {
-  const container = document.getElementById(containerId);
-  container.innerHTML = '';  // Limpa antes de adicionar
-
-  const querySnapshot = await getDocs(collection(db, colecao));
-
->>>>>>> be785954fd1606b9096ee58f2d7b8329d87211ff
   querySnapshot.forEach((doc) => {
     const produto = doc.data();
 
@@ -49,9 +40,4 @@ async function carregarProdutos(colecao, containerId) {
   exibirProdutos(todosProdutos);
 }
 
-<<<<<<< HEAD
 carregarProdutos();
-=======
-carregarProdutos("promocao", "promocao");
-carregarProdutos("catalogo", "catalogo");
->>>>>>> be785954fd1606b9096ee58f2d7b8329d87211ff
