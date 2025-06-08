@@ -35,14 +35,14 @@ body.fade-out {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    gap: 16px;
+    width: 120%;
+    gap: 30px;
 }
 
 .logo-title {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 6px;
 }
 
 .header h1 {
@@ -97,7 +97,7 @@ body.fade-out {
     background: var(--background-color);
     border-radius: 15px;
     font-weight: 600;
-    line-height: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: ease-in-out 300ms;
 }
 
@@ -146,6 +146,11 @@ body.fade-out {
     cursor: pointer;
     margin-left: 8px;
     transition: background 0.2s, transform 0.2s;
+}
+
+#search-button:hover, #shopping-car:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: ease-in-out 300ms;
 }
 
 .product-search {

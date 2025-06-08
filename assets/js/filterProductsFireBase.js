@@ -41,7 +41,7 @@ function renderizarResultados(produtos) {
         </div>
       </div>
       <div class="product-bottom">
-        <span class="product-price">R$ ${Number(prod.preco).toFixed(2)}</span>
+        <span class="product-price">R$ ${Number(prod.preco).toFixed(2)}/span>
         <div class="product-actions">
           <button class="add-to-cart"><span class="fa fa-shopping-cart"></span></button>
           <button class="view-details"><span class="fa fa-plus"></span></button>

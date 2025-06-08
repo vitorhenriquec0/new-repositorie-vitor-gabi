@@ -38,8 +38,8 @@ async function carregarProdutos() {
     item.innerHTML = `
       <img src="${produto.imagem}" alt="${produto.nome}">
       <h4>${produto.nome}</h4>
-      <span class="product-price">R$ ${produto.preco.toFixed(2)}</span>
       <p>${produto.descricao}</p>
+      <span class="product-price">R$ <span class="produto-preco">${produto.preco.toFixed(2)} </span></span>
       <button class="buy-btn" data-nome="${produto.nome}" data-preco="${produto.preco}" data-imagem="${produto.imagem}" data-descricao="${produto.descricao}">
         Adicionar ao carrinho
       </button>
