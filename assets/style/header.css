@@ -33,6 +33,7 @@ body.fade-out {
 
 .header-content {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 120%;
@@ -42,7 +43,12 @@ body.fade-out {
 .logo-title {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    margin-left: 10px;
 }
 
 .header h1 {
@@ -69,6 +75,9 @@ body.fade-out {
 
 .nav-menu {
     margin-top: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
 }
 
 .menu-list {

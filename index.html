@@ -22,22 +22,30 @@
                     <h1>Aquarela Papelaria</h1>
                 </div>
 
+                <button id="menu-toggle" class="menu-toggle">
+                    <span class="fa fa-bars"></span>
+                </button>
+
                 <nav class="nav-menu">
+                    <div class="product-search">
+                        <input type="text" id="search-input" placeholder="Pesquisar produtos..." />
+                        <button id="search-button" class="fa fa-search"></button>
+                        <div id="search-results" class="search-results-container"></div>
+                        <span id="shopping-car" class="fa fa-shopping-cart shopping"></span>
+                        <a href="./html/loginPage.html"><span id="user" class="fa fa-user"></span></a>
+                    </div>
+
                     <ul class="menu-list">
                         <li><a href="#main-content">Início</a></li>
                         <li><a href="./html/Produtos.html">Produtos</a></li>
                         <li><a href="#sobre-nos">Sobre nós</a></li>
                         <li><a href="#contatar">Contato</a></li>
                     </ul>
+
+
                 </nav>
 
-                <div class="product-search">
-                    <input type="text" id="search-input" placeholder="Pesquisar produtos..." />
-                    <button id="search-button" class="fa fa-search"></button>
-                    <div id="search-results" class="search-results-container"></div>
-                    <span id="shopping-car" class="fa fa-shopping-cart shopping"></span>
-                    <a href="./html/loginPage.html"><span id="user" class="fa fa-user"></span></a>
-                </div>
+
         </header>
     </div>
 
@@ -148,6 +156,12 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 
     <script type="module" src="./assets/js/mensagem.js"></script>
     <script type="module" src="./assets/js/exibirprodutos.js"></script>
