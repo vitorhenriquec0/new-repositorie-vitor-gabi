@@ -95,6 +95,10 @@
         justify-content: center;
     }
 
+    .logo-title h1 {
+        font-size: 1.5rem;
+    }
+
     .menu-list {
         gap: 18px;
         font-size: 1rem;
@@ -253,7 +257,7 @@
         display: flex;
         background: none;
         border: none;
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: var(--background-color);
         cursor: pointer;
         margin-left: 12px;
@@ -363,6 +367,7 @@
     }
 
     /* HEADER */
+
     .header-content {
         display: flex;
         align-items: center;
@@ -370,7 +375,9 @@
         flex-direction: row;
         gap: 18px;
         width: 100%;
-        align-items: stretch;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .logo-title {
