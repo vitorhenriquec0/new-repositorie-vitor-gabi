@@ -1,5 +1,15 @@
 @media (max-width: 900px) {
 
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100vw;
+        overflow-x: hidden;
+        font-size: 16px;
+        background: var(--background-color, #fff);
+    }
+
     /* HERO SECTION */
     .hero-section {
         padding: 0 0 30px 0;
@@ -8,7 +18,17 @@
     .hero-section h2 {
         font-size: 2rem;
         padding: 18px 0 0 0;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
+
+    .hero-section .h2-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 24px;
+    }
+
 
     .hero-section p {
         font-size: 1rem;
@@ -106,7 +126,6 @@
     .product-item {
         padding: 10px 6px 8px 6px;
         border-radius: 12px;
-        min-width: 0;
     }
 
     .product-item img {
@@ -282,6 +301,15 @@
     .hero-section h2 {
         font-size: 2rem;
         padding: 18px 0 0 0;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .hero-section .h2-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 24px;
     }
 
     .hero-section p {
@@ -369,6 +397,9 @@
     .product-header h2 {
         font-size: 2.5rem;
         margin-bottom: 6px;
+        align-items: center;
+        text-align: center;
+        width: 100%;
     }
 
     .product-list {
@@ -391,16 +422,17 @@
     }
 
     .product-item {
-        min-width: 49vh;
+        min-width: 140px;
         max-width: 100vw;
-        height: auto;
         flex: 1 1 140px;
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
+        padding: 10px 6px 8px 6px;
+        border-radius: 12px;
+        box-sizing: border-box;
+        margin: 0 auto;
     }
-
-    .product-column {}
 
     .product-item img {
         max-width: 80px;
