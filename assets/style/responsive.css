@@ -50,7 +50,7 @@
 
     .hero-section .banner-image .banner-text button {
         font-size: 1.1rem;
-        padding: 12px 24px;
+        padding: 10px 24px;
         white-space: nowrap;
         margin-bottom: 18px;
         margin-top: 10px;
@@ -88,12 +88,12 @@
     .product-header {
         flex-direction: column;
         gap: 8px;
-        align-items: flex-start;
+        align-items: center;
         padding: 0 2vw;
     }
 
     .product-header h2 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         margin-bottom: 6px;
     }
 
@@ -243,20 +243,326 @@
     }
 
     .nav-menu {
-        display: none;
         position: fixed;
         top: 55px;
         padding: 20px 0;
-        /* ajuste conforme seu header */
         left: 0;
         width: 100vw;
         background: var(--secondary-color);
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         z-index: 1000;
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+        flex-direction: column;
     }
 
     .nav-menu.active {
-        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        gap: 18px;
+        padding: 24px 0;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* HERO SECTION */
+    .hero-section {
+        padding: 0 0 30px 0;
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+        padding: 18px 0 0 0;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        margin: 0 10px;
+        padding: 18px 0 14px 0;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .hero-section .banner-image {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        height: auto;
+        padding: 0 4vw;
+    }
+
+    .hero-section .banner-image img {
+        width: 90vw;
+        max-width: 350px;
+        border-radius: 10px;
+        margin-bottom: 18px;
+    }
+
+    .hero-section .banner-image .banner-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 0 2vw;
+    }
+
+    .hero-section .banner-image .banner-text h3 {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+        word-break: break-word;
+    }
+
+    .hero-section .banner-image .banner-text button {
+        font-size: 1.1rem;
+        padding: 10px 24px;
+        white-space: nowrap;
+        margin-bottom: 18px;
+        margin-top: 10px;
+        max-width: 90vw;
+    }
+
+    /* HEADER */
+    .header-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: row;
+        gap: 18px;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .logo-title {
+        justify-content: center;
+    }
+
+    .menu-list {
+        gap: 18px;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .product-search {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    /* PRODUTOS */
+    .product-header {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        padding: 0 2vw;
+    }
+
+    .product-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 6px;
+    }
+
+    .product-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* permite quebrar para próxima linha se faltar espaço */
+        gap: 10px;
+        justify-content: flex-start;
+        /* ou center, se quiser centralizar */
+        padding: 10px 2vw;
+    }
+
+    .product-item h4,
+    .product-item p,
+    .product-price {
+        width: 100%;
+        text-align: center;
+        margin: 4px 0;
+    }
+
+    .product-item {
+        min-width: 49vh;
+        max-width: 100vw;
+        height: auto;
+        flex: 1 1 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .product-column {}
+
+    .product-item img {
+        max-width: 80px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .product-item h4 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        min-height: 32px;
+        margin: 6px 0 4px 0;
+    }
+
+    .product-item p {
+        font-size: 0.92;
+    }
+
+    .product-item button {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+
+    .product-price {
+        font-size: 0.9rem;
+        display: inherit;
+        margin-bottom: 8px;
+        max-width: fit-content;
+    }
+
+    /* SOBRE NÓS */
+    .sobre-nos {
+        flex-direction: column;
+        padding: 24px 20px;
+        align-items: first baseline;
+    }
+
+    .sobre-nos-image {
+        flex-direction: row;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sobre-nos-image img {
+        max-width: 25vw;
+        min-width: 120px;
+    }
+
+    .sobre-nos-info h3 {
+        font-size: 2rem;
+        padding: 8px 18px;
+    }
+
+    /* CONTATO */
+    .contato {
+        /* Adds vertical spacing to separate the contact section from adjacent sections */
+        padding: 16px 0;
+    }
+
+    .contato-container {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 2vw;
+        align-items: stretch;
+        max-width: 70vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contato-info {
+        align-items: center;
+        text-align: left;
+        max-width: 100%;
+        margin-bottom: 6px;
+    }
+
+    .contato-info h3 {
+        font-size: 1.05rem;
+        padding: 4px 6px;
+    }
+
+    .contato-info ul {
+        font-size: 0.85rem;
+    }
+
+    form#contato {
+        max-width: 100%;
+        padding: 8px 1vw;
+        box-sizing: border-box;
+        gap: 6px;
+        margin-top: 0;
+    }
+
+    form#contato label {
+        font-size: 0.92rem;
+        margin-bottom: 2px;
+    }
+
+    form#contato input,
+    form#contato textarea {
+        font-size: 0.92rem;
+        padding: 7px 6px;
+        border-radius: 6px;
+        width: calc(100% - 12px);
+        margin-bottom: 6px;
+    }
+
+    form#contato button {
+        font-size: 0.95rem;
+        padding: 8px 0;
+        border-radius: 6px;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        padding: 0 2vw;
+        gap: 10px;
+    }
+
+    .social-media {
+        gap: 14px;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: flex;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--background-color);
+        cursor: pointer;
+        margin-left: 12px;
+        z-index: 1001;
+    }
+
+    .nav-menu .product-search #search-input {
+        width: 40%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        position: fixed;
+        top: 55px;
+        padding: 20px 0;
+        left: 0;
+        width: 100vw;
+        background: var(--secondary-color);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 
     .menu-list {
