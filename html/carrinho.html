@@ -12,22 +12,33 @@
   <link rel="stylesheet" href="../assets/style/footer.css" />
 </head>
 <body>
-  <div class="top-container">
-    <header class="header">
-      <div class="header-content">
-        <div class="logo-title">
-          <div class="logo"></div>
-          <h1>Aquarela Papelaria</h1>
-        </div>
-        <nav class="nav-menu">
-          <ul class="menu-list">
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="./Produtos.html">Produtos</a></li>
-            <li><a href="../index.html#sobre-nos">Sobre nós</a></li>
-            <li><a href="../index.html#contatar">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div class="top-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-title">
+                    <div class="logo">
+                    </div>
+                    <h1>Aquarela Papelaria</h1>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="menu-list">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="./Produtos.html">Produtos</a></li>
+                        <li><a href="../index.html#sobre-nos">Sobre nós</a></li>
+                        <li><a href="../index.html#contatar">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="product-search">
+                    <input type="text" id="search-input" placeholder="Pesquisar produtos..." />
+                    <button id="search-button" class="fa fa-search"></button>
+                    <div id="search-results" class="search-results-container" autocomplete="off"></div>
+                    <a href="./carrinho.html"><span id="shopping-car" class="fa fa-shopping-cart shopping"></span></a>
+                    <a href="../html/loginPage.html"><span id="user" class="fa fa-user"></span></a>
+                </div>
+            </div>
+        </header>
+    </div>
     </header>
   </div>
 
@@ -35,7 +46,6 @@
     <section>
       <h2>Seu Carrinho</h2>
       <div class="product-list" id="carrinho-list">
-        <!-- Produtos do carrinho serão exibidos aqui via JavaScript -->
       </div>
     </section>
   </main>

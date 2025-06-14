@@ -13,7 +13,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-//
+
 
 async function carregarProdutos() {
   const listaProdutos = document.querySelector(".product-list");
@@ -28,12 +28,17 @@ async function carregarProdutos() {
       <h4>${produto.nome}</h4>
       <p>${produto.descricao}</p>
       <span class="product-price">R$ <span class="produto-preco">${produto.preco.toFixed(2)}</span></span>
-      <button class="buy-btn">Adicionar ao carrinho</button>
+      <button class="buy-btn"
+        data-nome="${produto.nome}"
+        data-descricao="${produto.descricao}"
+        data-preco="${produto.preco}"
+        data-imagem="${produto.imagem || './assets/img/padrao.jpg'}">
+        Adicionar ao carrinho
+      </button>
     </div>
   `;
     listaProdutos.innerHTML += itemHTML;
   });
 }
 
-// Executa ao carregar a página
 carregarProdutos();
