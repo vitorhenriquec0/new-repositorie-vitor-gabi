@@ -2,15 +2,16 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produtos - Papelaria Aquarela</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../assets/style/variables.css">
-  <link rel="stylesheet" href="../assets/style/header.css">
-  <link rel="stylesheet" href="../assets/style/responsive.css">
-  <link rel="stylesheet" href="../assets/style/style.css">
-  <link rel="stylesheet" href="../assets/style/footer.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Papelaria Aquarela</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/style/variables.css">
+    <link rel="stylesheet" href="../assets/style/header.css">
+    <link rel="stylesheet" href="../assets/style/responsive.css">
+    <link rel="stylesheet" href="../assets/style/responsiveProdutos.css">
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/footer.css" />
 </head>
 
 <body>
@@ -18,11 +19,24 @@
         <header class="header">
             <div class="header-content">
                 <div class="logo-title">
-                    <div class="logo">
-                    </div>
+                    <div class="logo"></div>
                     <h1>Aquarela Papelaria</h1>
                 </div>
+
+                <button id="menu-toggle" class="menu-toggle">
+                    <span class="fa fa-bars"></span>
+                </button>
+
                 <nav class="nav-menu">
+                    <div class="product-search">
+                        <input type="text" id="search-input" placeholder="Pesquisar produtos..." />
+                        <button id="search-button" class="fa fa-search"></button>
+                        <div id="search-results" class="search-results-container" autocomplete="off"></div>
+                        <a href="./carrinho.html"><span id="shopping-car"
+                                class="fa fa-shopping-cart shopping"></span></a>
+                        <a href="../html/loginPage.html"><span id="user" class="fa fa-user"></span></a>
+                    </div>
+
                     <ul class="menu-list">
                         <li><a href="../index.html">Início</a></li>
                         <li><a href="./Produtos.html">Produtos</a></li>
@@ -30,18 +44,10 @@
                         <li><a href="../index.html#contatar">Contato</a></li>
                     </ul>
                 </nav>
-
-                <div class="product-search">
-                    <input type="text" id="search-input" placeholder="Pesquisar produtos..." />
-                    <button id="search-button" class="fa fa-search"></button>
-                    <div id="search-results" class="search-results-container" autocomplete="off"></div>
-                    <a href="./carrinho.html"><span id="shopping-car" class="fa fa-shopping-cart shopping"></span></a>
-                    <a href="../html/loginPage.html"><span id="user" class="fa fa-user"></span></a>
-                </div>
             </div>
         </header>
     </div>
-  </footer>
+    </footer>
 
     <section class="all-products">
         <h2>Produtos em Promoção</h2>
