@@ -240,6 +240,10 @@ body.fade-out {
     transform: scale(1.06);
 }
 
+.all-products {
+    margin-top: 110px;
+}
+
 .all-products h2 {
     font-size: 2.5rem;
     font-weight: 700;
