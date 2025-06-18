@@ -1,0 +1,101 @@
+/* ==========================================================
+   RESPONSIVIDADE PARA A PÁGINA DO CARRINHO
+   (Ativado em telas com largura máxima de 992px e 600px)
+   ========================================================== */
+
+section {
+    margin-top: 110px;
+}
+
+@media (max-width: 992px) {
+    section {
+        margin-top: 80px;
+    }
+    main section {
+        padding: 12px 4vw;
+    }
+    main section h2 {
+        font-size: 2rem;
+        margin-bottom: 18px;
+        text-align: center;
+    }
+    .product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 0;
+    }
+    .product-item, .carrinho-item {
+        flex-direction: column;
+        align-items: center;
+        padding: 14px 8px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+        background: #fff;
+        min-width: 0;
+        word-break: break-word;
+    }
+    .product-item img, .carrinho-item img {
+        max-width: 100px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+    .product-item h3, .carrinho-item h3 {
+        font-size: 1.1rem;
+        margin: 6px 0 4px 0;
+        text-align: center;
+    }
+    .product-item p, .carrinho-item p {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .product-item .price, .carrinho-item .price {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #5f82d1;
+        margin-bottom: 10px;
+    }
+    .product-item button, .carrinho-item button {
+        padding: 10px 0;
+        width: 100%;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: none;
+        background: #5f82d1;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-top: 8px;
+    }
+    .product-item button:active, .carrinho-item button:active {
+        background: #4663a6;
+    }
+}
+
+@media (max-width: 600px) {
+    main section h2 {
+        font-size: 1.3rem;
+    }
+    .product-list {
+        gap: 10px;
+    }
+    .product-item, .carrinho-item {
+        padding: 10px 4px;
+    }
+    .product-item img, .carrinho-item img {
+        max-width: 70px;
+    }
+    .product-item h3, .carrinho-item h3 {
+        font-size: 1rem;
+    }
+    .product-item p, .carrinho-item p {
+        font-size: 0.9rem;
+    }
+    .product-item .price, .carrinho-item .price {
+        font-size: 1rem;
+    }
+} 

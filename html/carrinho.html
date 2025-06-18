@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../assets/style/responsive.css">
   <link rel="stylesheet" href="../assets/style/style.css">
   <link rel="stylesheet" href="../assets/style/footer.css" />
+  <link rel="stylesheet" href="../assets/style/responsiveCarrinho.css" />
 </head>
 <body>
     <div class="top-container">
@@ -20,7 +21,19 @@
                     </div>
                     <h1>Aquarela Papelaria</h1>
                 </div>
+
+                <button id="menu-toggle" class="menu-toggle">
+                    <span class="fa fa-bars"></span>
+                </button>
+
                 <nav class="nav-menu">
+                    <div class="product-search">
+                        <input type="text" id="search-input" placeholder="Pesquisar produtos..." />
+                        <button id="search-button" class="fa fa-search"></button>
+                        <div id="search-results" class="search-results-container" autocomplete="off"></div>
+                        <a href="./carrinho.html"><span id="shopping-car" class="fa fa-shopping-cart shopping"></span></a>
+                        <a href="../html/loginPage.html"><span id="user" class="fa fa-user"></span></a>
+                    </div>
                     <ul class="menu-list">
                         <li><a href="../index.html">Início</a></li>
                         <li><a href="./Produtos.html">Produtos</a></li>
@@ -28,14 +41,6 @@
                         <li><a href="../index.html#contatar">Contato</a></li>
                     </ul>
                 </nav>
-
-                <div class="product-search">
-                    <input type="text" id="search-input" placeholder="Pesquisar produtos..." />
-                    <button id="search-button" class="fa fa-search"></button>
-                    <div id="search-results" class="search-results-container" autocomplete="off"></div>
-                    <a href="./carrinho.html"><span id="shopping-car" class="fa fa-shopping-cart shopping"></span></a>
-                    <a href="../html/loginPage.html"><span id="user" class="fa fa-user"></span></a>
-                </div>
             </div>
         </header>
     </div>
@@ -72,5 +77,10 @@
 
 
   <script type="module" src="../assets/js/exibirCarrinho.js"></script>
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
